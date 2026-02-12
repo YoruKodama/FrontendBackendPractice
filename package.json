@@ -1,12 +1,23 @@
 {
-  "name": "product-card-sass",
+  "name": "products-api",
   "version": "1.0.0",
-  "description": "Карточка товара на SASS",
+  "description": "API для управления товарами",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "sass": "sass --watch styles/main.scss:styles/main.css",
-    "build": "sass styles/main.scss:styles/main.css"
+    "start-all": "concurrently \"npm run sass\" \"npm run dev\""
+  },
+  "keywords": ["api", "express", "products"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.22.1"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11",
     "sass": "^1.97.3"
   }
-}с
+}
